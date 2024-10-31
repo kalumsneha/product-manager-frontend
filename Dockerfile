@@ -5,7 +5,7 @@ FROM node:18.15.0-alpine
 WORKDIR /app
 
 # Copy package.json and yarn.lock to the container
-COPY package.json npm.lock ./
+COPY package.json package-lock.json ./
 
 # Install dependencies
 RUN npm install --frozen-lockfile
