@@ -54,7 +54,7 @@ function Register() {
                 <p align='left' style={{ paddingLeft: 10, fontWeight: "bold" }}>Password</p>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder={"Password"} />
                 <br />
-                <button onClick={SignUp} className="btn btn-primary"> signUp </button>
+                <button onClick={SignUp} className="btn btn-primary"> Register </button>
             </div>
 
         </div>
