@@ -29,13 +29,13 @@ function Materials() {
     }
 
     async function fetchData() {
-        let result = await fetch("http://localhost:8000/api/product/" + params.id);
+        let result = await fetch("http://18.221.156.168/api/product/" + params.id);
         result = await result.json();
         setData(result)
     }
 
     async function fetchMatData() {
-        let result = await fetch("http://localhost:8000/api/listproductmat");
+        let result = await fetch("http://18.221.156.168/api/listproductmat");
         result = await result.json();
         setMatData(result)
     }
@@ -45,7 +45,7 @@ function Materials() {
         formData.append('deleted', 1);
         formData.append('deleted_at', date.getFullYear().toString() + '-' + pad2(date.getMonth() + 1) + '-' + pad2(date.getDate()) + ' ' + pad2(date.getHours()) + ':' + pad2(date.getMinutes()) + ':' + pad2(date.getSeconds()));
         formData.append('modified_by', user.name);
-        let result = await fetch("http://localhost:8000/api/deleteproductmat/" + id + "?_method=PUT", {
+        let result = await fetch("http://18.221.156.168/api/deleteproductmat/" + id + "?_method=PUT", {
             method: 'POST',
             body: formData
         })

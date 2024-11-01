@@ -17,7 +17,7 @@ function AddMat() {
       formData.append("quantity", quantity);
       formData.append("rate", rate);
       formData.append("amount", quantity * rate);
-      let result = await fetch("http://localhost:8000/api/addproductmat", {
+      let result = await fetch("http://18.221.156.168/api/addproductmat", {
         method: "POST",
         body: formData,
       });

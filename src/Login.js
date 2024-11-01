@@ -18,7 +18,7 @@ function Login() {
     async function login() {
         let item = { name, password };
 
-        let result = await fetch("http://localhost:8000/api/login",
+        let result = await fetch("http://18.221.156.168/api/login",
             {
                 method: 'POST',
                 body: JSON.stringify(item),

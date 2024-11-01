@@ -10,7 +10,7 @@ function Search() {
 
 
     async function deleteOp(id) {
-        let result = await fetch("http://localhost:8000/api/deleteproduct/" + id, {
+        let result = await fetch("http://18.221.156.168/api/deleteproduct/" + id, {
             method: 'DELETE'
         })
         result = await result.json();
@@ -22,7 +22,7 @@ function Search() {
     }
 
     async function search(key) {
-        let result = await fetch("http://localhost:8000/api/searchproduct/" + key);
+        let result = await fetch("http://18.221.156.168/api/searchproduct/" + key);
         result = await result.json();
         setSearchData(result)
     }

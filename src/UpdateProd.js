@@ -24,7 +24,7 @@ function UpdateProd() {
     }, [])
 
     async function fetchData() {
-        let result = await fetch("http://localhost:8000/api/product/" + params.id);
+        let result = await fetch("http://18.221.156.168/api/product/" + params.id);
         result = await result.json();
         setData(result)
         setRevision(result.revision)
@@ -50,7 +50,7 @@ function UpdateProd() {
         formData.append('other_percentage', otherper);
         formData.append('margin_percentage', marginper);
         formData.append('modified_by', user.name);
-        let result = await fetch("http://localhost:8000/api/updateproduct/" + id + "?_method=PUT", {
+        let result = await fetch("http://18.221.156.168/api/updateproduct/" + id + "?_method=PUT", {
             method: 'POST',
             body: formData
         })

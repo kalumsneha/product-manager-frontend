@@ -18,7 +18,7 @@ function Register() {
     async function SignUp() {
         let item = { name, email, password };
 
-        let result = await fetch("http://localhost:8000/api/register",
+        let result = await fetch("http://18.221.156.168/api/register",
             {
                 method: 'POST',
                 body: JSON.stringify(item),

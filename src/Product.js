@@ -41,7 +41,7 @@ function Product() {
     );
     formData.append("modified_by", user.name);
     let result = await fetch(
-      "http://localhost:8000/api/deleteproduct/" + id + "?_method=PUT",
+      "http://18.221.156.168/api/deleteproduct/" + id + "?_method=PUT",
       {
         method: "POST",
         body: formData,
@@ -52,7 +52,7 @@ function Product() {
   }
 
   async function fetchData() {
-    let result = await fetch("http://localhost:8000/api/listproduct");
+    let result = await fetch("http://18.221.156.168/api/listproduct");
     result = await result.json();
     setData(result);
   }

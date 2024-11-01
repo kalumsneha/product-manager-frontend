@@ -19,7 +19,7 @@ function UpdateMat() {
     },[])
 
     async function fetchData() {
-        let result = await fetch("http://localhost:8000/api/productmat/" + params.id);
+        let result = await fetch("http://18.221.156.168/api/productmat/" + params.id);
         result = await result.json();
         setData(result)
         setRevision(result.revision)
@@ -37,7 +37,7 @@ function UpdateMat() {
         formData.append('rate', rate);
         formData.append('amount', (quantity*rate));
         formData.append('modified_by', user.name);
-        let result = await fetch("http://localhost:8000/api/updateproductmat/" + id + "?_method=PUT", {
+        let result = await fetch("http://18.221.156.168/api/updateproductmat/" + id + "?_method=PUT", {
             method: 'POST',
             body: formData
         })

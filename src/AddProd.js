@@ -27,7 +27,7 @@ function AddProd() {
             formData.append('equipment_cost', equipment);
             formData.append('other_percentage', otherper);
             formData.append('margin_percentage', marginper);
-            let result = await fetch("http://localhost:8000/api/addproduct", {
+            let result = await fetch("http://18.221.156.168/api/addproduct", {
                 method: 'POST',
                 body: formData
             })
